@@ -160,7 +160,7 @@ const Navbar = () => {
               bottom: 0;
               left: 50%;
               transform: translateX(-50%);
-              background: linear-gradient(to right, #38f6fc, #007bff);
+              background: linear-gradient(45deg, #38f6fc, #007bff);
               transition: width 0.3s ease;
             }
             .nav-link:hover::after {
@@ -254,7 +254,7 @@ const Navbar = () => {
                   </Link>
                   <motion.button
                     onClick={toggleNotifications}
-                    className="nav-link text-white/90 hover:text-cyan-300 relative"
+                    className="cursor-pointer nav-link text-white/90 hover:text-cyan-300 relative"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -268,7 +268,7 @@ const Navbar = () => {
                   </motion.button>
                   <motion.button
                     onClick={handleLogout}
-                    className="nav-button flex items-center text-white"
+                    className="cursor-pointer nav-button flex items-center text-white"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -289,19 +289,21 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <div className="md:hidden flex items-center relative z-10">
-              <motion.button
-                onClick={toggleNotifications}
-                className="p-2 text-cyan-300 hover:bg-cyan-900/50 rounded-full relative"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <FaBell size={28} />
-                {notifications.filter(n => !n.read).length > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {notifications.filter(n => !n.read).length}
-                  </span>
-                )}
-              </motion.button>
+              {isLoggedIn && (
+                <motion.button
+                  onClick={toggleNotifications}
+                  className="p-2 text-cyan-300 hover:bg-cyan-900/50 rounded-full relative "
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  <FaBell size={28} />
+                  {notifications.filter(n => !n.read).length > 0 && (
+                    <span className="absolute -top-1 -right-1 bg-red-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                      {notifications.filter(n => !n.read).length}
+                    </span>
+                  )}
+                </motion.button>
+              )}
               <button className="ml-2 text-cyan-300 focus:outline-none" onClick={toggleMenu}>
                 {isOpen ? <FaTimes size={28} /> : <FaBars size={28} />}
               </button>
@@ -363,7 +365,7 @@ const Navbar = () => {
                           className="nav-link text-white/90 hover:text-cyan-300"
                           onClick={toggleMenu}
                         >
-                           Profile
+                          Profile
                         </Link>
                       </motion.div>
                       <motion.div variants={itemVariants}>
@@ -456,7 +458,7 @@ const Navbar = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => markAsRead(notification._id)}
-                            className="mt-2 px-3 py-1 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
+                            className="cursor-pointer mt-2 px-3 py-1 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700"
                           >
                             Mark as Read
                           </motion.button>
@@ -469,7 +471,7 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setIsNotificationsOpen(false)}
-                  className="mt-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 w-full"
+                  className="cursor-pointer mt-4 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 w-full"
                 >
                   Close
                 </motion.button>

@@ -2,8 +2,9 @@
 @import "tailwindcss";
 
 body {
-    background: linear-gradient(135deg, #0f2027 0%,  #203a43 50%, #2c5364 100%);
+  background: linear-gradient(to bottom right, #1e3a8a, #155e75, #581c87);
 }
+
 .dancing-script-mainfont {
     font-family: "Dancing Script", cursive;
     font-optical-sizing: auto;

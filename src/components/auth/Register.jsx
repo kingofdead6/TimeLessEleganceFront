@@ -141,79 +141,123 @@ export default function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center my-30 p-4 sm:p-6">
       {showTermsPopup && (
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="fixed inset-0  bg-[#00000080] backdrop-blur-sm flex items-center justify-center z-50"
-        >
-          <motion.div
-            variants={textVariants}
-            className="bg-white/10 backdrop-blur-xl bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] border border-white/20 rounded-2xl p-6 max-w-lg max-h-[80vh] overflow-y-auto shadow-2xl relative"
-          >
-            <style>{`
-              .glow-dot {
-                position: absolute;
-                width: 10px;
-                height: 10px;
-                background: rgba(255, 255, 255, 0.6);
-                border-radius: 50%;
-                filter: blur(3px);
-                animation: blink 4s ease-in-out infinite;
-              }
-              .glow-dot:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
-              .glow-dot:nth-child(2) { top: 70%; left: 80%; animation-delay: 1s; }
-              .glow-dot:nth-child(3) { top: 50%; left: 40%; animation-delay: 2s; }
+  <motion.div
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+    className="fixed inset-0 bg-[#00000080] backdrop-blur-sm flex items-center justify-center z-50"
+  >
+    <motion.div
+      variants={textVariants}
+      className="bg-white/10 backdrop-blur-xl bg-gradient-to-br from-[#0f2027] via-[#203a43] to-[#2c5364] border border-white/20 rounded-2xl p-6 max-w-lg max-h-[80vh] overflow-y-auto shadow-2xl relative"
+    >
+      <style>{`
+        .glow-dot {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background: rgba(255, 255, 255, 0.6);
+          border-radius: 50%;
+          filter: blur(3px);
+          animation: blink 4s ease-in-out infinite;
+        }
+        .glow-dot:nth-child(1) { top: 10%; left: 20%; animation-delay: 0s; }
+        .glow-dot:nth-child(2) { top: 70%; left: 80%; animation-delay: 1s; }
+        .glow-dot:nth-child(3) { top: 50%; left: 40%; animation-delay: 2s; }
 
-              @keyframes blink {
-                0%, 100% { opacity: 0.3; transform: scale(1); }
-                50% { opacity: 1; transform: scale(1.4); }
-              }
-            `}</style>
+        @keyframes blink {
+          0%, 100% { opacity: 0.3; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.4); }
+        }
+      `}</style>
 
-            <div className="glow-dot" />
-            <div className="glow-dot" />
-            <div className="glow-dot" />
+      <div className="glow-dot" />
+      <div className="glow-dot" />
+      <div className="glow-dot" />
 
-            <motion.h2
-              variants={textVariants}
-              className="text-2xl font-extrabold text-white mb-4"
-            >
-              Terms of Use
-            </motion.h2>
-            <motion.div
-              variants={textVariants}
-              className="text-white/90 space-y-4"
-            >
-              <p>
-                <strong>1. Privacy:</strong> Your personal data will be processed per our privacy policy and applicable laws (e.g., GDPR).
-              </p>
-              <p>
-                <strong>2. Usage:</strong> Use the platform only for legitimate purposes, such as shopping and order tracking.
-              </p>
-              <p>
-                <strong>3. Accuracy:</strong> Provide accurate information. False data may lead to account suspension.
-              </p>
-              <p>
-                <strong>4. Account Security:</strong> Keep your login credentials confidential and report unauthorized access immediately.
-              </p>
-              <p>
-                <strong>5. Respect:</strong> Interact with support and admins respectfully.
-              </p>
-              <p>
-                <strong>6. Service Changes:</strong> We may modify or terminate services with prior notice.
-              </p>
-            </motion.div>
-            <motion.button
-              variants={textVariants}
-              onClick={() => setShowTermsPopup(false)}
-              className="cursor-pointer mt-6 w-full bg-gradient-to-r from-cyan-400 to-pink-400 text-white p-3 rounded-md font-medium transition-all duration-300 hover:from-cyan-500 hover:to-pink-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0f2027]"
-            >
-              Close
-            </motion.button>
-          </motion.div>
-        </motion.div>
-      )}
+      <motion.h2
+        variants={textVariants}
+        className="text-2xl font-extrabold text-white mb-6 text-center"
+      >
+        Terms of Service
+      </motion.h2>
+      <motion.div
+        variants={textVariants}
+        className="text-white/90 space-y-4"
+      >
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">1. Acceptance of Terms</h3>
+          <p className="text-center">
+            By accessing or using our website, you agree to be bound by these Terms of Service. If you do not agree, you may not use our services.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">2. Eligibility</h3>
+          <p className="text-center">
+            You must be at least 18 years old or the age of majority in your jurisdiction to make purchases on this site.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">3. Product Information</h3>
+          <p className="text-center">
+            We strive to ensure all product descriptions, prices, and images are accurate, but we do not warrant that they are error-free, complete, or current.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">4. Orders and Payment</h3>
+          <p className="text-center">
+            We reserve the right to refuse or cancel any order at any time. All payments must be made through the provided payment gateways.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">5. Shipping and Delivery</h3>
+          <p className="text-center">
+            Estimated delivery times are provided for convenience and are not guaranteed. We are not responsible for delays caused by carriers or customs.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">6. Returns and Refunds</h3>
+          <p className="text-center">
+            You may return eligible products within 1 day of delivery. Refunds will be processed to your original method of payment.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">7. User Accounts</h3>
+          <p className="text-center">
+            You are responsible for maintaining the confidentiality of your account and password. You agree to accept responsibility for all activities under your account.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">8. Intellectual Property</h3>
+          <p className="text-center">
+            All content on this website—including text, images, logos, and designs—is the property of Timeless Elegance and may not be used without permission.
+          </p>
+        </div>
+
+        <div className="bg-black/30 backdrop-blur-lg rounded-lg p-4 border border-cyan-400/20 shadow-lg">
+          <h3 className="text-lg font-semibold text-cyan-300 mb-2 text-center">9. Limitation of Liability</h3>
+          <p className="text-center">
+            We shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or products.
+          </p>
+        </div>
+      </motion.div>
+      <motion.button
+        variants={textVariants}
+        onClick={() => setShowTermsPopup(false)}
+        className="cursor-pointer mt-6 w-full bg-gradient-to-r from-cyan-400 to-pink-400 text-white p-3 rounded-md font-medium transition-all duration-300 hover:from-cyan-500 hover:to-pink-500 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-[#0f2027]"
+      >
+        Close
+      </motion.button>
+    </motion.div>
+  </motion.div>
+)}
 
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
         <motion.button

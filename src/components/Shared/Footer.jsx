@@ -74,7 +74,7 @@ const Footer = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-white text-md max-w-xs"
+              className="text-white text-xl max-w-sm "
             >
               Empowering your style with cutting-edge designs and exclusive updates. Join us to stay ahead of the curve.
             </motion.p>
@@ -164,7 +164,7 @@ const Footer = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.3, duration: 0.5 }}
-                      className="text-sm text-gray-400"
+                      className="text-sm text-gray-400 "
                     >
                       <a href="mailto:contact@yourbrand.com" className="hover:text-blue-300 transition-colors">
                         contact@yourbrand.com
@@ -173,8 +173,8 @@ const Footer = () => {
             </div>
             {/*Pages Links */}
             <div className="flex">
-  <ul className="flex flex-row space-x-4 text-sm ml-70">
-    {['Home', 'About Us', 'Services', 'Projects', 'Contact'].map((item, index) => (
+  <ul className="flex flex-row space-x-4 text-sm ml-0 md:ml-70">
+    {['Home', 'About Us', 'Contact Us' , 'Service Terms'].map((item, index) => (
       <motion.li
         key={item}
         initial={{ opacity: 0, x: -20 }}

@@ -15,7 +15,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-cyan-800 to-purple-900  px-4 sm:px-6 lg:px-8 relative">
+    <div className="min-h-screen x-4 sm:px-6 lg:px-8 relative">
       <style>{`
         .textured-bg {
           background-image: url('https://res.cloudinary.com/dhu2uyrwx/image/upload/v1751467890/noise-texture.png');

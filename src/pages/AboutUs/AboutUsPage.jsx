@@ -9,7 +9,7 @@ const AboutUsPage = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname, location.search]);
   return (
-    <div className='bg-gradient-to-br from-indigo-950 via-cyan-900 to-purple-950'>
+    <div >
         <AboutUsHeader />
         <TestimonialsPage />
         <FAQ />

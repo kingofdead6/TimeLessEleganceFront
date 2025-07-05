@@ -63,7 +63,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-cyan-800 to-purple-900 py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div className="min-h-screen  py-10 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       <ToastContainer />
       <motion.div
         variants={pageVariants}

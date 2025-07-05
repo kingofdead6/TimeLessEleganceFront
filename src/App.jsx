@@ -22,6 +22,7 @@ import Chatbot from "./components/Shared/ChatBot";
 import ResetPasswordRequest from "./components/auth/ResetPasswordRequest";
 import ResetPassword from "./components/auth/ResetPassword";
 import Profile from "./components/Store/Profile";
+import TermsOfService from "./pages/TermsOfService";
 
 function AppContent() {
   const location = useLocation();
@@ -50,6 +51,7 @@ function AppContent() {
         <Route path="/reset-password-request" element={<ResetPasswordRequest />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="service-terms" element={<TermsOfService />} />
       </Routes>
       <Footer />
     </>

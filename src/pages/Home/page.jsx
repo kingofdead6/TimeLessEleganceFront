@@ -9,7 +9,7 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname, location.search]);
   return (
-    <div className="w-full min-h-screen overflow-x-hidden bg-gradient-to-br from-indigo-900 via-cyan-800 to-purple-900"  style={{  }}>
+    <div className="w-full min-h-screen overflow-x-hidden "  style={{  }}>
       <HeroPage />
       <Offers />
       <ProductsPage />

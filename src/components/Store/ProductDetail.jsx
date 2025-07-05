@@ -155,7 +155,7 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-cyan-800 to-purple-900 py-8 px-4 sm:px-6 lg:px-8 relative">
+    <div className="min-h-screen  py-8 px-4 sm:px-6 lg:px-8 relative">
       <ToastContainer />
       <motion.div
         variants={pageVariants}

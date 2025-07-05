@@ -134,7 +134,7 @@ export default function Profile() {
   const isFormComplete = Object.values(formData).every((value) => value.trim() !== "");
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6 bg-gradient-to-br from-indigo-950 via-cyan-900 to-purple-950">
+    <div className="min-h-screen flex items-center justify-center p-4 sm:p-6">
       <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
         <motion.button
           variants={textVariants}

@@ -54,7 +54,7 @@ useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location.pathname, location.search])
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 via-cyan-800 to-purple-900 py-20 mt-10 px-4 sm:px-6 lg:px-8 relative">
+    <div className="min-h-screen py-20 mt-10 px-4 sm:px-6 lg:px-8 relative">
       <ToastContainer />
       <style>{`
         .textured-bg {
