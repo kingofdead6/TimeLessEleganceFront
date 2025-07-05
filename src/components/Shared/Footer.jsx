@@ -196,15 +196,23 @@ const Footer = () => {
         {/* Seperating line*/}
         <div className='border-1 mt-10 '/>  
         {/* Bottom: All Rights Reserved */}
-        <div className="pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            © {new Date().getFullYear()} TimeLess Elegance. All rights reserved.
-          </motion.p>
-        </div>
+       <div className="pt-6 border-t border-gray-800 text-center text-sm text-gray-400">
+  <motion.p
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.5 }}
+  >
+    <a
+      href="https://softwebelevation.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:underline text-gray-400 hover:text-cyan-400 transform duration-300"
+    >
+      © {new Date().getFullYear()} SoftWebElevation. All rights reserved.
+    </a>
+  </motion.p>
+</div>
+
       </div>
     </footer>
   );
